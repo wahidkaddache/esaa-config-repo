@@ -6,8 +6,8 @@ spring:
     name: admission-service
   datasource:
     url: jdbc:postgresql://postgres:5432/esaa_admission
-    username: admission_user
-    password: admission_password
+    username: ${ADMISSION_DB_USERNAME:admission_user}
+    password: ${ADMISSION_DB_PASSWORD:admission_secure_password_2024}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
