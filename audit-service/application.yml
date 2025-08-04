@@ -6,8 +6,8 @@ spring:
     name: audit-service
   datasource:
     url: jdbc:postgresql://postgres:5432/esaa_audit
-    username: audit_user
-    password: audit_password
+    username: ${AUDIT_DB_USERNAME:audit_user}
+    password: ${AUDIT_DB_PASSWORD:audit_secure_password_2024}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
