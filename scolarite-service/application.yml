@@ -6,8 +6,8 @@ spring:
     name: scolarite-service
   datasource:
     url: jdbc:postgresql://postgres:5432/esaa_scolarite
-    username: scolarite_user
-    password: scolarite_password
+    username: ${SCOLARITE_DB_USERNAME:scolarite_user}
+    password: ${SCOLARITE_DB_PASSWORD:scolarite_secure_password_2024}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
