@@ -6,8 +6,8 @@ spring:
     name: auth-service
   datasource:
     url: jdbc:postgresql://postgres:5432/esaa_auth
-    username: auth_user
-    password: auth_password
+    username: ${AUTH_DB_USERNAME:auth_user}
+    password: ${AUTH_DB_PASSWORD:auth_password}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -19,8 +19,8 @@ spring:
         format_sql: true
   security:
     jwt:
-      secret: esaa-jwt-secret-key-2024-very-long-and-secure-key-for-production
-      expiration: 86400000 # 24 heures
+      secret: ${JWT_SECRET:esaa-jwt-secret-key-2024-very-long-and-secure-key-for-production}
+      expiration: ${JWT_EXPIRATION:86400000}
 
 eureka:
   client:
