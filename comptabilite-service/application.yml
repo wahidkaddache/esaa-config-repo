@@ -6,8 +6,8 @@ spring:
     name: comptabilite-service
   datasource:
     url: jdbc:postgresql://postgres:5432/esaa_comptabilite
-    username: comptabilite_user
-    password: comptabilite_password
+    username: ${COMPTABILITE_DB_USERNAME:comptabilite_user}
+    password: ${COMPTABILITE_DB_PASSWORD:comptabilite_secure_password_2024}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
