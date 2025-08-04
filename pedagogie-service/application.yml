@@ -6,8 +6,8 @@ spring:
     name: pedagogie-service
   datasource:
     url: jdbc:postgresql://postgres:5432/esaa_pedagogie
-    username: pedagogie_user
-    password: pedagogie_password
+    username: ${PEDAGOGIE_DB_USERNAME:pedagogie_user}
+    password: ${PEDAGOGIE_DB_PASSWORD:pedagogie_secure_password_2024}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
