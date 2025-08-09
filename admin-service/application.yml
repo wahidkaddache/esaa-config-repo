@@ -1,11 +1,10 @@
-
 # Configuration pour Admin Service - GitHub Config Repo
 # Repository: https://github.com/wahidkaddache/esaa-config-repo
 
 server:
   port: 8090
   servlet:
-    context-path: /admin
+    context-path: /superadmin
 
 spring:
   application:
